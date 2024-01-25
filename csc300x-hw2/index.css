@@ -1,0 +1,41 @@
+body {
+    background-color: sandybrown;
+    color: brown;
+    column-gap: 40px
+}
+
+
+h1 {
+    border: 10px groove khaki;
+    text-align: center;
+    width: auto;
+}
+h3 {
+    text-align: center;
+    width: auto;
+}
+
+div {
+    text-align: justify;
+    width: auto;
+    word-spacing: 600px;
+    border: 5px groove khaki;
+    
+}
+
+a:link {
+    color: brown;
+}
+
+a:visited {
+    color: yellow;
+}
+
+a:hover{
+    color: white;
+    
+
+}
+table, th, td { border: 5px 
+    groove khaki; 
+     }
