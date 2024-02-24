@@ -4,9 +4,9 @@ const choices = ["rock", "paper", "scissors"]
 
 //The click function for both the Player and Computer
 function playPicker(pOption) {
-    pHolder = pOption; 
+    pHolder = pOption;
     const compChoice = choices[Math.floor(Math.random() * choices.length)];
-    
+
     wL(pHolder, compChoice);
     compPicker.src = `images/${choices.PNG}`;
 }
@@ -21,11 +21,11 @@ function wL(P, C) {
     } else if (P === 'paper' && C === 'scissors') {
         result.textContent = "You Lose!"
     } else if (P === 'rock' && C === 'paper') {
-        result.textContent = "You Lose!" 
+        result.textContent = "You Lose!"
     } else {
         result.textContent = "You Win!"
     }
-    }
+}
 
 
 
