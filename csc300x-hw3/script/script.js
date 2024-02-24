@@ -6,10 +6,13 @@ for (let index = 0; index < gallery.length; index++) {
 function expand(event) {
     const smallImage = event.currentTarget;
     const bigImage = document.querySelector(".big");
+    
+    
     bigImage.classList.remove('big');
     bigImage.classList.add('small');
     smallImage.classList.remove('small');
     smallImage.classList.add('big');
+
 }
 
 

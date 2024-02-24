@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rock, Paper, Scissors, Go!</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <div class="player">
+        <div class="play">
+            <div id="choice">
+                <a href="#"><img src="images/rock.PNG" alt="rock" onclick="playPicker('rock')"></a>
+            </div>
+            <div id="choice">
+                <a href="#"><img src="images/paper.PNG" alt="paper" onclick = "playPicker('paper')"></a>
+            </div>
+
+            <div id="choice">
+                <a href="#"><img src="images/scissors.PNG" alt="Scissors" onclick = "playPicker('scissors')"></a>
+            </div>
+        </div>
+        <div class="pText">
+            <p>YOUR THROW</p>
+        </div>
+    </div>
+
+    <div class = "computer">
+        <div class = "comp">
+            <img id = "compS" src ="images/question-mark.PNG">
+        </div>
+
+        <div class = "pText">
+            <p>COMPUTER THROW</p>
+        </div>
+    </div>
+
+    <div class = "outcome">
+        <p class = "oText">
+            RESULT:
+        </p>
+        <div id = "oTextt">Waiting...</div>
+
+        <a href = "index.html"><button>Play Again</button></a>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
