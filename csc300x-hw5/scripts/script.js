@@ -149,4 +149,5 @@ search();
 // Add event listener to search button
 window.onload = function () {
     document.getElementById('searcher').addEventListener('submit', search);
+    
 }
