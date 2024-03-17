@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Github Gallery</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+
+<div class = "searchbar" id = "searcher">
+    <i class = "fa fa-github"></i>
+    <label id = "gitsearch" for="searchB" contenteditable="false">Search for User: </label> 
+    <input type="text" id="gitbox"><br> 
+    <button type = "submit" id = "searchB" onclick="search()">Search</button>
+</div>
+<h2>Github Repositories:</h2>
+        <ul id="repos">
+        </ul>
+</body>
+
+</html>

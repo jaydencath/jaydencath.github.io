@@ -1,0 +1,36 @@
+.searchbar {
+    display: flex;
+    margin: 1px;
+    padding: 10px;
+}
+
+#gitsearch {
+    margin-left: 10px;
+}
+
+#searchB {
+    margin-left: 10px;
+}
+
+#gitbox {
+    margin-left: 10px;
+}
+
+#repos {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 2px ridge black;
+    background-color: darkgray;
+    border-radius: 5px;
+   
+}
+
+#repos li {
+    background-color: aliceblue;
+    border: 2px black solid;
+    margin: 20px;
+    padding: 20px;
+}
+
