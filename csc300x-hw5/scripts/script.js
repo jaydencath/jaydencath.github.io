@@ -1,14 +1,10 @@
 // Fetch repository languages for myself
+// I added my token in a header for my first commit to allow higher rate limits but Github flagged me so I removed them to allow my code to work on Github.
 function getRepos() {
-    // These two const are used to get my own repositories
+    // This is used to get my own repositories
     const apiURL = "https://api.github.com/users/jaydencath/repos";
-    const token = "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";
 
-    fetch(apiURL, {
-        headers: {
-            Authorization: "token " + token
-        }
-    })
+    fetch(apiURL)
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Not Found");
@@ -22,11 +18,8 @@ function getRepos() {
 
             repoData.forEach(repo => {
                 // Fetch the languages from my repositories.
-                fetch("https://api.github.com/repos/jaydencath/" + repo.name + "/languages", {
-                    headers: {
-                        Authorization: "token " + token
-                    }
-                })
+                fetch("https://api.github.com/repos/jaydencath/" + repo.name + "/languages")
+                    
                     .then(response => {
                         if (!response.ok) {
                             throw new Error("Error loading languages");
@@ -81,18 +74,12 @@ getRepos();
 
 // Search function for searching other users repositories
 function search(e) {
-    // My Git Token
-    const token = "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";
     // Clear the list of repos
     document.getElementById('repos').innerHTML = "";
     // Get user's username from search box
     const user = document.getElementById('gitbox').value;
     const apiURL = 'https://api.github.com/users/' + user + '/repos';
-    fetch(apiURL, {
-        headers: {
-            Authorization: "token " + token
-        }
-    })
+    fetch(apiURL)
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Not Found");
@@ -105,11 +92,8 @@ function search(e) {
 
             repoData.forEach(repo => {
                 // Fetch the languages from my repositories.
-                fetch("https://api.github.com/repos/" + user + "/" + repo.name + "/languages", {
-                    headers: {
-                        Authorization: "token " + token
-                    }
-                })
+                fetch("https://api.github.com/repos/" + user + "/" + repo.name + "/languages")
+                    
                     .then(response => {
                         if (!response.ok) {
                             throw new Error("Error loading languages");
@@ -128,11 +112,8 @@ function search(e) {
                         // Make a div for the commits
                         const divCom = document.createElement('div');
                         divCom.id = "commits";
-                        fetch("https://api.github.com/repos/" + user + "/" + repo.name + "/commits", {
-                            headers: {
-                                Authorization: "token " + token
-                            }
-                        })
+                        fetch("https://api.github.com/repos/" + user + "/" + repo.name + "/commits")
+                        
                             .then(response => response.json())
                             .then(commits => {
                                 // Get total number of commits
